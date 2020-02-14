@@ -1,0 +1,21 @@
+<div class="timetable">
+    <div class="timetable-column" v-for="(day, index) in timetable">
+        <div class="timetable-day">{{days[index]}}</div>
+
+        <div class="mdc-card mdc-card--outlined" v-for="lesson in day">
+            <div>
+                <p>{{lesson.start}}</p>
+                <p><span class="mdi mdi-clock mdc-list-item__graphic"></span></p>
+                <p>{{lesson.end}}</p>
+            </div>
+            <div>
+                <p>{{lesson.room}}</p>
+                <p>{{lesson.name}}</p>
+                <p>{{lesson.teacher}}</p>
+            </div>
+            <div>
+                <p>2D 1/2</p>
+            </div>
+        </div>
+    </div>
+</div>

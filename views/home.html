@@ -1,0 +1,48 @@
+<h4 class="card-header" v-if="home.hasEnded">Plan lekcji na jutro ({{home.tomorrow}})</h4>
+<h4 class="card-header" v-if="!home.hasEnded">Plan lekcji na dzisiaj ({{home.today}})</h4>
+<div class="mdc-card mdc-card--outlined">
+    <div class="mdc-card-wrapper__text-section">
+        <div class="home-time">
+            <span class="mdi mdi-clock mdc-list-item__graphic"></span>
+            <p>Czas trwania lekcji: <b id="lessons-hours">{{home.startEnd}}</b></p>
+        </div>
+        <div class="home-timetable" v-if="!home.hasStarted">
+            <p>Pierwsze lekcje:</p>
+            <loop v-for="lessons in home.firstLessons">
+                <p>{{lessons}}</p>
+            </loop>
+        </div>
+        <div class="home-timetable" v-if="home.hasStarted">
+            <p>Następne lekcje:</p>
+            <loop v-for="lessons in home.nextLessons">
+                <p>{{lessons}}</p>
+            </loop>
+        </div>
+        <div class="home-events">
+            <p>Wydarzenia:</p>
+        </div>
+    </div>
+    <divider></divider>
+    <div class="mdc-card__actions">
+        <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded full-btn" onclick="setSelectedMenuItem(1)">
+            <span class="mdc-button__label" >Przejdź do planu lekcji</span>
+            <span class="mdi mdi-arrow-right mdc-list-item__graphic" style="float: right"></span>
+        </button>
+    </div>
+</div>
+<space style="height: 10px"></space>
+<h4 class="card-header">Oceny z ostatnich 7 dni</h4>
+<div class="mdc-card mdc-card--outlined">
+    <div class="mdc-card-wrapper__text-section">
+        <div class="demo-card__supporting-text" style="text-align: center;margin:10px 0px">
+            <i>Brak ocen do wyświetlenia</i>
+        </div>
+    </div>
+    <divider></divider>
+    <div class="mdc-card__actions">
+        <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded full-btn" onclick="setSelectedMenuItem(3)">
+            <span class="mdc-button__label">Przejdź do ocen</span>
+            <span class="mdi mdi-arrow-right mdc-list-item__graphic" style="float: right"></span>
+        </button>
+    </div>
+</div>
