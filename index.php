@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="./css/material-components-web.min.css">
     <link rel="stylesheet" href="./css/font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="./js/core/main.min.css" rel="stylesheet" />
+    <link href="./js/daygrid/main.min.css" rel="stylesheet" />
+    <link href="./js/timegrid/main.min.css" rel="stylesheet" />
+    <link href="./js/list/main.min.css" rel="stylesheet" />
+    <script src="./js/core/main.min.js"></script>
+    <script src="./js/interaction/main.min.js"></script>
+    <script src='./js/core/locales-all.min.js'></script>
+    <script src="./js/daygrid/main.min.js"></script>
+    <script src="./js/timegrid/main.min.js"></script>
+    <script src="./js/list/main.min.js"></script>
 </head>
 
 <body style="opacity:0">
@@ -33,7 +43,7 @@
         </div>
         <div class="mdc-drawer__content">
             <nav class="mdc-list">
-                <?php include 'menu.html'; ?>
+                <?php include 'views/menu.html'; ?>
             </nav>
         </div>
     </aside>
@@ -50,6 +60,12 @@
                     <!-- Timetable screen -->
                     <div v-if="screen === 1">
                         <?php include 'views/timetable.html'; ?>
+                    </div>
+                </transition>
+                <transition name="fade">
+                    <!-- Timetable screen -->
+                    <div v-if="screen === 2">
+                        <?php include 'views/schedule.html'; ?>
                     </div>
                 </transition>
                 <transition name="fade">

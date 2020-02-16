@@ -36,8 +36,12 @@ body {
     flex: auto;
     overflow: auto;
     position: relative;
-    margin: 16px;
+    margin: 0px;
     padding: 0px;
+}
+
+#app>div {
+    padding: 16px;
 }
 
 .main-content {
@@ -303,4 +307,18 @@ divider {
     margin-bottom: 5px;
 }
 
-/*#endregion*/
+/* #endregion */
+
+#calendar-container {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+.fc-header-toolbar {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
