@@ -311,14 +311,66 @@ divider {
 
 #calendar-container {
     position: absolute;
-    top: 16px;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
+    top: 0px;
+    left: -1px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .fc-header-toolbar {
     padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number:hover {
+    background:rgba(0, 0, 0, 0.06);
+}
+
+.fc-today .fc-day-number {
+    background:#2196F3;
+    color: #fff
+}
+
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+    text-align: center;
+    display: block;
+    float: unset !important;
+    text-decoration: none !important;
+    margin: 3px auto;
+    padding: 5px;
+    width: 20px;
+    border-radius: 50%;
+    line-height: 20px;
+}
+
+.fc-right .fc-button-group .fc-button:not(.fc-dayGridMonth-button){
+    border-left: 1px solid #dadce0;
+}
+
+.fc-right .fc-button-group {
+    border: 1px solid #dadce0;
+    border-radius: .25em;
+}
+
+.fc-today-button {
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: transparent !important;
+    padding: 0.3em 1.35em !important;
+    border: 1px solid #dadce0 !important;
+}
+
+.fc-left .fc-button:not(.fc-today-button):hover {
+    background: transparent !important;
+}
+
+.fc-left .fc-button:not(.fc-today-button):hover::before {
+    content: " ";
+    background: rgba(0, 0, 0, .08);
+    width: 25px;
+    height: 25px;
+    border-radius: 50% !important;
+    position: absolute;
+    z-index: -1;
+    left: 10px;
 }

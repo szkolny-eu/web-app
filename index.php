@@ -1,15 +1,3 @@
-<?php
-    // ini_set('display_errors', 1);
-    // ini_set('display_startup_errors', 1);
-    // error_reporting(E_ALL);
-
-    //session_start();
-    //if(!isset($_SESSION["userId"])) {
-        // header('Location: http://szkolny.eu/login');
-        // exit();
-    //}
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -32,6 +20,7 @@
     <script src="./js/daygrid/main.min.js"></script>
     <script src="./js/timegrid/main.min.js"></script>
     <script src="./js/list/main.min.js"></script>
+    <script src="./js/moment-with-locales.min.js"></script>
 </head>
 
 <body style="opacity:0">
