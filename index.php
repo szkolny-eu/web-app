@@ -7,24 +7,25 @@
     <title>Strona główna :: Szkolny.eu</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/material-components-web.min.css">
-    <link rel="stylesheet" href="./css/font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="./js/core/main.min.css" rel="stylesheet" />
-    <link href="./js/daygrid/main.min.css" rel="stylesheet" />
-    <link href="./js/timegrid/main.min.css" rel="stylesheet" />
-    <link href="./js/list/main.min.css" rel="stylesheet" />
-    <script src="./js/core/main.min.js"></script>
-    <script src="./js/interaction/main.min.js"></script>
-    <script src='./js/core/locales-all.min.js'></script>
-    <script src="./js/daygrid/main.min.js"></script>
-    <script src="./js/timegrid/main.min.js"></script>
-    <script src="./js/list/main.min.js"></script>
-    <script src="./js/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="/css/material-components-web.min.css">
+    <link rel="stylesheet" href="/css/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/js/calendar/core/main.min.css" rel="stylesheet" />
+    <link href="/js/calendar/daygrid/main.min.css" rel="stylesheet" />
+    <link href="/js/calendar/timegrid/main.min.css" rel="stylesheet" />
+    <link href="/js/calendar/list/main.min.css" rel="stylesheet" />
+    <script src="/js/calendar/core/main.min.js"></script>
+    <script src="/js/calendar/interaction/main.min.js"></script>
+    <script src='/js/calendar/core/locales-all.min.js'></script>
+    <script src="/js/calendar/daygrid/main.min.js"></script>
+    <script src="/js/calendar/timegrid/main.min.js"></script>
+    <script src="/js/calendar/list/main.min.js"></script>
+    <script src="/js/moment-with-locales.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 </head>
 
 <body style="opacity:0">
-
     <aside class="mdc-drawer">
         <div class="mdc-drawer__header">
             <h3 class="mdc-drawer__title" id="username"></h3>
@@ -105,18 +106,14 @@
         </div>
         <div class="mdc-dialog__scrim"></div>
     </div>
-    <script src="./js/material-components-web.min.js"></script>
+    <script src="/js/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script src="/js/firebase/firebase-app.js"></script>
+    <script src="/js/firebase/firebase-analytics.js"></script>
+    <script src="/js/firebase/firebase-auth.js"></script>
+    <script src="/js/firebase/firebase-database.js"></script>
     <script>
-        var _0x2852=['wojDo8Kew47DqMKWwrTCiMKyHMOjw4NI','wrt6FWfDnFUHwq17MGEkw6zDmcOQw7nDlQ4gQWt3ERY9ZhTDnEVFwqXCvHDCuyPCv8K1w6dW','CcKoR8KaZMKodhvDqXrDjR8iF2LDo8OQwovCvn4+woMJw58lw5XDrX/DlS0p','K2nDocOHTE4rw7lfSMOFNcOIwrFxw6fCj8K0w5rDp0/DisKDwpwXcsKB','HEwTw7LDoGcewpkOwqBDw4g=','w61Zw7LCocKtZmLChsKmBgzDq8OgcMK+w4xFBhPCthLDvsKkworClcKgwoQ1w63DiRA9MQ3Dt2HDp3nCvcOyeQ=='];(function(_0x26e09c,_0x2c4829){var _0x901270=function(_0x5249c6){while(--_0x5249c6){_0x26e09c.push(_0x26e09c.shift())}};_0x901270(++_0x2c4829)}(_0x2852,0x1a5));var _0xad91=function(_0x2cf5c7,_0x25e2b3){_0x2cf5c7=_0x2cf5c7-0x0;var _0x7ef015=_0x2852[_0x2cf5c7];if(_0xad91.CpNwqy===undefined){(function(){var _0x26317f;try{var _0x22a846=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x26317f=_0x22a846()}catch(_0x41a10e){_0x26317f=window}
+var _0x2852=['wojDo8Kew47DqMKWwrTCiMKyHMOjw4NI','wrt6FWfDnFUHwq17MGEkw6zDmcOQw7nDlQ4gQWt3ERY9ZhTDnEVFwqXCvHDCuyPCv8K1w6dW','CcKoR8KaZMKodhvDqXrDjR8iF2LDo8OQwovCvn4+woMJw58lw5XDrX/DlS0p','K2nDocOHTE4rw7lfSMOFNcOIwrFxw6fCj8K0w5rDp0/DisKDwpwXcsKB','HEwTw7LDoGcewpkOwqBDw4g=','w61Zw7LCocKtZmLChsKmBgzDq8OgcMK+w4xFBhPCthLDvsKkworClcKgwoQ1w63DiRA9MQ3Dt2HDp3nCvcOyeQ=='];(function(_0x26e09c,_0x2c4829){var _0x901270=function(_0x5249c6){while(--_0x5249c6){_0x26e09c.push(_0x26e09c.shift())}};_0x901270(++_0x2c4829)}(_0x2852,0x1a5));var _0xad91=function(_0x2cf5c7,_0x25e2b3){_0x2cf5c7=_0x2cf5c7-0x0;var _0x7ef015=_0x2852[_0x2cf5c7];if(_0xad91.CpNwqy===undefined){(function(){var _0x26317f;try{var _0x22a846=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x26317f=_0x22a846()}catch(_0x41a10e){_0x26317f=window}
 var _0x2b3fa8='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x26317f.atob||(_0x26317f.atob=function(_0x56fe95){var _0x4bb892=String(_0x56fe95)['replace'](/=+$/,'');for(var _0x59f9a1=0x0,_0x151f79,_0x3d9f74,_0xdb77a9=0x0,_0x37c2d1='';_0x3d9f74=_0x4bb892.charAt(_0xdb77a9++);~_0x3d9f74&&(_0x151f79=_0x59f9a1%0x4?_0x151f79*0x40+_0x3d9f74:_0x3d9f74,_0x59f9a1++%0x4)?_0x37c2d1+=String.fromCharCode(0xff&_0x151f79>>(-0x2*_0x59f9a1&0x6)):0x0){_0x3d9f74=_0x2b3fa8.indexOf(_0x3d9f74)}
 return _0x37c2d1})}());var _0x57c96b=function(_0x1a92bd,_0x25e2b3){var _0x353d9f=[],_0x2a2d58=0x0,_0x28dd69,_0x5373de='',_0x10278a='';_0x1a92bd=atob(_0x1a92bd);for(var _0x54f84d=0x0,_0x5100a3=_0x1a92bd.length;_0x54f84d<_0x5100a3;_0x54f84d++){_0x10278a+='%'+('00'+_0x1a92bd.charCodeAt(_0x54f84d)['toString'](0x10))['slice'](-0x2)}
 _0x1a92bd=decodeURIComponent(_0x10278a);for(var _0x4b7e53=0x0;_0x4b7e53<0x100;_0x4b7e53++){_0x353d9f[_0x4b7e53]=_0x4b7e53}
@@ -127,7 +124,10 @@ var _0x17ca9c=_0xad91.snEDMW[_0x2cf5c7];if(_0x17ca9c===undefined){if(_0xad91.ufR
 _0x7ef015=_0xad91.RicUXI(_0x7ef015,_0x25e2b3);_0xad91.snEDMW[_0x2cf5c7]=_0x7ef015}else{_0x7ef015=_0x17ca9c}
 return _0x7ef015};var firebaseConfig={'apiKey':_0xad91('0x0','A[kT'),'authDomain':_0xad91('0x1','YSMR'),'databaseURL':'https://edziennik-4d161.firebaseio.com','projectId':'edziennik-4d161','storageBucket':_0xad91('0x2','K]*b'),'messagingSenderId':_0xad91('0x3','ex^U'),'appId':_0xad91('0x4','F9t1')};firebase[_0xad91('0x5','^%Cy')](firebaseConfig)
     </script>
-    <script src="./js/main.js"></script>
+    <script src="/account.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/timetable.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

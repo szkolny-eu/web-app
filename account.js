@@ -1,4 +1,4 @@
-[{
+const demo_db = [{
     "announcements": [{
         "announcementEndDate": "2019-11-30",
         "announcementId": 83561,
@@ -10301,4 +10301,4 @@
         "teamId": 60409,
         "type": 0
     }]
-}]
+}];
