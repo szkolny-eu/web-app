@@ -1,11 +1,20 @@
 "use strict";
 
-const gradesColors = {'1':'red','2':'orange','3':'amber','4':'lightgreen','5':'lightgreen','6':'lightblue','-':'orange','+':'lightgreen'};
+const gradesColors = {
+    '1': 'red',
+    '2': 'orange',
+    '3': 'amber',
+    '4': 'lightgreen',
+    '5': 'lightgreen',
+    '6': 'lightblue',
+    '-': 'orange',
+    '+': 'lightgreen'
+};
 const database = firebase.database();
-const date = new Date("20 Nov 2019 15:12:00");
+const date = new Date("20 May 2020 15:12:00");
 // var date = new Date();
 const weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
-const data = demo_db[0];
+const data = demo_db;
 let calendar;
 
 Vue.config.ignoredElements = ['divider', 'space', 'loop'];
@@ -23,73 +32,7 @@ let app = new Vue({
     el: '#app',
     data: {
         versionName: "0.0.15, pre-alpha",
-        timetable: [
-            [{
-                start: "8:00",
-                end: "8:45",
-                room: "4",
-                teacher: "Jan Kowalski",
-                name: "Matematyka",
-            }, {
-                start: "8:50",
-                end: "9:35",
-                room: "16",
-                teacher: "Adam Nowak",
-                name: "Polski",
-            }],
-            [{
-                start: "8:00",
-                end: "8:45",
-                room: "4",
-                teacher: "Jan Kowalski",
-                name: "Matematyka",
-            }, {
-                start: "8:50",
-                end: "9:35",
-                room: "16",
-                teacher: "Adam Nowak",
-                name: "Polski",
-            }],
-            [{
-                start: "8:00",
-                end: "8:45",
-                room: "4",
-                teacher: "Jan Kowalski",
-                name: "Matematyka",
-            }, {
-                start: "8:50",
-                end: "9:35",
-                room: "16",
-                teacher: "Adam Nowak",
-                name: "Polski",
-            }],
-            [{
-                start: "8:00",
-                end: "8:45",
-                room: "4",
-                teacher: "Jan Kowalski",
-                name: "Matematyka",
-            }, {
-                start: "8:50",
-                end: "9:35",
-                room: "16",
-                teacher: "Adam Nowak",
-                name: "Polski",
-            }],
-            [{
-                start: "8:00",
-                end: "8:45",
-                room: "4",
-                teacher: "Jan Kowalski",
-                name: "Matematyka",
-            }, {
-                start: "8:50",
-                end: "9:35",
-                room: "16",
-                teacher: "Adam Nowak",
-                name: "Polski",
-            }]
-        ],
+        timetable: getTimetable(date),
         screen: -1,
         days: weekdays,
         home: {
@@ -112,27 +55,27 @@ database.ref("K3325HOG").once('value').then((snapshot) => {
     document.querySelector("#useremail").innerText = snap.profiles[0].subname;
 
     document.body.style.opacity = "1";
-        switch (location.hash) {
-            case '#home':
-                setSelectedMenuItem(0);
-                break;
+    switch (location.hash) {
+        case '#home':
+            setSelectedMenuItem(0);
+            break;
 
-            case '#plan-lekcji':
-                setSelectedMenuItem(1);
-                break;
+        case '#plan-lekcji':
+            setSelectedMenuItem(1);
+            break;
 
-            case '#oceny':
-                setSelectedMenuItem(3);
-                break;
+        case '#oceny':
+            setSelectedMenuItem(3);
+            break;
 
-            case '#ustawienia':
-                setSelectedMenuItem(10);
-                break;
+        case '#ustawienia':
+            setSelectedMenuItem(10);
+            break;
 
-            default:
-                setSelectedMenuItem(0);
-                break;
-        }
+        default:
+            setSelectedMenuItem(0);
+            break;
+    }
 });
 
 //#region Menu stuff

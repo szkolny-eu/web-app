@@ -20,7 +20,7 @@
     <script src="/js/calendar/daygrid/main.min.js"></script>
     <script src="/js/calendar/timegrid/main.min.js"></script>
     <script src="/js/calendar/list/main.min.js"></script>
-    <script src="/js/moment-with-locales.min.js"></script>
+    <script src="/js/libs/moment-with-locales.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
 </head>
@@ -106,8 +106,8 @@
         </div>
         <div class="mdc-dialog__scrim"></div>
     </div>
-    <script src="/js/material-components-web.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/libs/material-components-web.min.js"></script>
+    <script src="/js/libs/vue.js"></script>
     <script src="/js/firebase/firebase-app.js"></script>
     <script src="/js/firebase/firebase-analytics.js"></script>
     <script src="/js/firebase/firebase-auth.js"></script>
