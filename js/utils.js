@@ -15,38 +15,15 @@ function setSelectedMenuItem(i) {
     }
 }
 
-function initCalendar() {
-    const calendarEl = document.getElementById('calendar');
+function random(seed) {
+    const x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
 
-    calendar = new FullCalendar.Calendar(calendarEl, {
-        plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
-        height: 'parent',
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-        },
-        defaultView: 'dayGridMonth',
-        defaultDate: moment().format("YYYY-MM-DD"),
-        locale: 'pl',
-        navLinks: true, // can click day/week names to navigate views
-        editable: false,
-        eventLimit: true, // allow "more" link when too many events
-        events: [{
-            groupId: 0,
-            title: 'Wielomiany - Sprawdzian',
-            start: '2020-02-08T14:05:00',
-            end: '2020-02-08T14:50:00'
-        },
-            {
-                color: '#4db6ac',
-                groupId: 0,
-                title: 'Walentynki',
-                start: '2020-02-14'
-            }
-        ]
-    });
-    calendar.render();
+function getRandomInt(min, max, seed = 1) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(random(seed) * (max - min + 1)) + min;
 }
 
 function showSnackbar(text) {
@@ -67,6 +44,18 @@ function showSnackbar(text) {
     }
 
     snackbar.open();
+}
+
+Array.prototype.shuffle = function() {
+    var i = this.length, j, temp;
+    if ( i == 0 ) return this;
+    while ( --i ) {
+        j = Math.floor( Math.random() * ( i + 1 ) );
+        temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+    return this;
 }
 
 function setClickListener(elem, cb) {

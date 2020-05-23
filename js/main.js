@@ -31,7 +31,7 @@ Vue.component('grade', {
 let app = new Vue({
     el: '#app',
     data: {
-        versionName: "0.0.15, pre-alpha",
+        versionName: "0.1.0, pre-alpha",
         timetable: getTimetable(date),
         screen: -1,
         days: weekdays,
@@ -49,34 +49,8 @@ let app = new Vue({
     }
 });
 
-database.ref("K3325HOG").once('value').then((snapshot) => {
-    const snap = snapshot.val();
-    document.querySelector("#username").innerText = snap.profiles[0].accountNameLong;
-    document.querySelector("#useremail").innerText = snap.profiles[0].subname;
-
-    document.body.style.opacity = "1";
-    switch (location.hash) {
-        case '#home':
-            setSelectedMenuItem(0);
-            break;
-
-        case '#plan-lekcji':
-            setSelectedMenuItem(1);
-            break;
-
-        case '#oceny':
-            setSelectedMenuItem(3);
-            break;
-
-        case '#ustawienia':
-            setSelectedMenuItem(10);
-            break;
-
-        default:
-            setSelectedMenuItem(0);
-            break;
-    }
-});
+document.querySelector("#username").innerText = data.profiles[0].studentNameLong;
+document.querySelector("#useremail").innerText = data.profiles[0].subname;
 
 //#region Menu stuff
 
@@ -97,5 +71,32 @@ setClickListener(menuItems[8], () => showSnackbar("Tabilca ogłoszeń wkrótce z
 setClickListener(menuItems[9], () => showSnackbar("Powiadomienia wkrótce zostaną dodane!"));
 setClickListener(menuItems[10], () => setSelectedMenuItem(10));
 
+
+document.body.style.opacity = "1";
+switch (location.hash) {
+    case '#home':
+        setSelectedMenuItem(0);
+        break;
+
+    case '#plan-lekcji':
+        setSelectedMenuItem(1);
+        break;
+
+    case '#terminarz':
+        setSelectedMenuItem(2);
+        break;
+
+    case '#oceny':
+        setSelectedMenuItem(3);
+        break;
+
+    case '#ustawienia':
+        setSelectedMenuItem(10);
+        break;
+
+    default:
+        setSelectedMenuItem(0);
+        break;
+}
 
 //#endregion

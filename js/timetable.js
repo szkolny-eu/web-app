@@ -38,6 +38,7 @@ function getTimetable(date) {
 }
 
 function parseHour(time) {
+    if(time === null) return "";
     return time.match(/.{1,2}/g).splice(0,2).join(":");
 }
 
