@@ -153,6 +153,7 @@
 <script src="/js/utils.js"></script>
 <script src="/js/timetable.js"></script>
 <script src="/js/events.js"></script>
+<script src="/js/grades.js"></script>
 <script src="/js/main.js"></script>
 </body>
 

@@ -14,6 +14,7 @@ const database = firebase.database();
 const date = new Date("20 May 2020 15:12:00");
 // var date = new Date();
 const weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+const eventDialog = new mdc.dialog.MDCDialog(document.querySelector('#eventDialog'));
 const data = demo_db;
 let calendar;
 
@@ -31,8 +32,9 @@ Vue.component('grade', {
 let app = new Vue({
     el: '#app',
     data: {
-        versionName: "0.1.0, pre-alpha",
-        timetable: getTimetable(date),
+        versionName: "0.1.1, pre-alpha",
+        timetable: Timetable.getTimetable(date),
+        grades: Grades.getGrades(),
         screen: -1,
         days: weekdays,
         home: {
@@ -59,43 +61,43 @@ const content = document.getElementById('main-content');
 const menuItems = document.querySelectorAll(".mdc-drawer .mdc-list-item");
 const snackbar = new mdc.snackbar.MDCSnackbar(document.querySelector('.mdc-snackbar'));
 
-setClickListener(menuItems[0], () => setSelectedMenuItem(0));
-setClickListener(menuItems[1], () => setSelectedMenuItem(1));
-setClickListener(menuItems[2], () => setSelectedMenuItem(2));
-setClickListener(menuItems[3], () => setSelectedMenuItem(3));
-setClickListener(menuItems[4], () => showSnackbar("Wiadomości wkrótce zostaną dodane!"));
-setClickListener(menuItems[5], () => showSnackbar("Zadania domowe wkrótce zostaną dodane!"));
-setClickListener(menuItems[6], () => showSnackbar("Zachowanie wkrótce zostanie dodane!"));
-setClickListener(menuItems[7], () => showSnackbar("Frekwencja wkrótce zostanie dodana!"));
-setClickListener(menuItems[8], () => showSnackbar("Tabilca ogłoszeń wkrótce zostanie dodana!"));
-setClickListener(menuItems[9], () => showSnackbar("Powiadomienia wkrótce zostaną dodane!"));
-setClickListener(menuItems[10], () => setSelectedMenuItem(10));
+Utils.setClickListener(menuItems[0], () => Utils.setSelectedMenuItem(0));
+Utils.setClickListener(menuItems[1], () => Utils.setSelectedMenuItem(1));
+Utils.setClickListener(menuItems[2], () => Utils.setSelectedMenuItem(2));
+Utils.setClickListener(menuItems[3], () => Utils.setSelectedMenuItem(3));
+Utils.setClickListener(menuItems[4], () => Utils.showSnackbar("Wiadomości wkrótce zostaną dodane!"));
+Utils.setClickListener(menuItems[5], () => Utils.showSnackbar("Zadania domowe wkrótce zostaną dodane!"));
+Utils.setClickListener(menuItems[6], () => Utils.showSnackbar("Zachowanie wkrótce zostanie dodane!"));
+Utils.setClickListener(menuItems[7], () => Utils.showSnackbar("Frekwencja wkrótce zostanie dodana!"));
+Utils.setClickListener(menuItems[8], () => Utils.showSnackbar("Tabilca ogłoszeń wkrótce zostanie dodana!"));
+Utils.setClickListener(menuItems[9], () => Utils.showSnackbar("Powiadomienia wkrótce zostaną dodane!"));
+Utils.setClickListener(menuItems[10], () => Utils.setSelectedMenuItem(10));
 
 
 document.body.style.opacity = "1";
 switch (location.hash) {
     case '#home':
-        setSelectedMenuItem(0);
+        Utils.setSelectedMenuItem(0);
         break;
 
     case '#plan-lekcji':
-        setSelectedMenuItem(1);
+        Utils.setSelectedMenuItem(1);
         break;
 
     case '#terminarz':
-        setSelectedMenuItem(2);
+        Utils.setSelectedMenuItem(2);
         break;
 
     case '#oceny':
-        setSelectedMenuItem(3);
+        Utils.setSelectedMenuItem(3);
         break;
 
     case '#ustawienia':
-        setSelectedMenuItem(10);
+        Utils.setSelectedMenuItem(10);
         break;
 
     default:
-        setSelectedMenuItem(0);
+        Utils.setSelectedMenuItem(0);
         break;
 }
 
