@@ -3,12 +3,9 @@
        <!-- <div class="demo-card__supporting-text" style="text-align: center;margin:10px 0px">
              <i>Brak ocen do wyświetlenia</i>
         </div>-->
-        <div class="demo-card__supporting-text grades">
-            <h5>Język angielski</h5>
-            <div><grade value="1"></grade><grade value="2"></grade></div>
-            <divider></divider>
-            <h5>Fizyka</h5>
-            <div><grade value="2"></grade><grade value="5"></grade><grade value="-"></grade><grade value="6"></grade></div>
+        <div class="demo-card__supporting-text grades" v-for="(semester, index) in grades" style="border-bottom:1px solid #e0e0e0;">
+            <h5>{{semester[0].subject}}</h5>
+            <div><grade v-for="(grade) in semester" :value="grade.name"></grade></div>
         </div>
     </div>
     <!-- <divider></divider> -->

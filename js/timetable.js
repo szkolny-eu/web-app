@@ -27,7 +27,7 @@ class Timetable {
             let lessons = [];
             for (let j = 0; j < day.length; j++) {
                 if (day[j].type !== -1) {
-                    let lesson = new Lesson(Timetable.parseHour(day[j].startTime), Timetable.parseHour(day[j].endTime), day[j].classroom, Utils.getTeacher(day[j].teacherId).teacherName + ' ' + Utils.getTeacher(day[j].teacherId).teacherSurname, Utils.getSubject(day[j].subjectId).subjectLongName, Utils.getTeam(day[j].teamId).teamName);
+                    let lesson = new Lesson(Timetable.parseHour(day[j].startTime), Timetable.parseHour(day[j].endTime), day[j].classroom, Utils.getTeacherLongName(day[j].teacherId), Utils.getTeam(day[j].teamId).teamName);
                     lessons.push(lesson);
                 }
             }

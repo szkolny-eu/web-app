@@ -300,6 +300,8 @@ divider {
     font-weight: 500;
     font-size: 14px;
     margin: 5px 3px;
+    min-width: 15px;
+    text-align: center;
 }
 
 .grades h5 {

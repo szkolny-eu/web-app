@@ -64,6 +64,11 @@ class Utils {
         })[0];
     }
 
+    static getTeacherLongName(id) {
+        let teacher = this.getTeacher(id);
+        return teacher.teacherName + ' ' + teacher.teacherSurname;
+    }
+
     static getSubject(id) {
         return data.subjects.filter(obj => {
             return obj.subjectId === id

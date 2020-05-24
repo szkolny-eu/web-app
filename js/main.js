@@ -1,14 +1,17 @@
 "use strict";
 
+//TODO: Add more Colors
 const gradesColors = {
-    '1': 'red',
-    '2': 'orange',
-    '3': 'amber',
-    '4': 'lightgreen',
-    '5': 'lightgreen',
-    '6': 'lightblue',
-    '-': 'orange',
-    '+': 'lightgreen'
+    '1': '#FF0000',
+    '2': '#FF9100',
+    '3': '#FFFF00',
+    '4': '#76FF03',
+    '5': '#00C853',
+    '6': '#2196F3',
+    '-': '#FF7043',
+    'n': '#FF7043',
+    'b': '#FF7043',
+    '+': '#4CAF50'
 };
 const database = firebase.database();
 const date = new Date("20 May 2020 15:12:00");
@@ -23,7 +26,7 @@ Vue.component('grade', {
     props: ['value'],
     data: function data() {
         return {
-            color: gradesColors[this._props.value.slice(0, 1)]
+            color: gradesColors[this._props.value]
         };
     },
     template: '<div v-bind:style="{ backgroundColor: color }" class="grade">{{value}}</div>'
