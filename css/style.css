@@ -425,3 +425,36 @@ divider {
 .gradeTop {
     height: 58px;
 }
+
+.settingsProfilePic {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    background-color: #8bc34a;
+    background-image: url("/img/account.svg");
+    border-radius: 50%;
+    background-size: 121%;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+.settingsProfileInfo {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 16px;
+}
+
+.settingsUserInfo {
+    padding: 16px;
+}
+
+.settingsProfileInfo p:nth-child(1) {
+    margin: 0;
+    font-size: 21px;
+}
+
+.settingsProfileInfo p:nth-child(2) {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}

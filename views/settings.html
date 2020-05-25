@@ -1,3 +1,31 @@
+<div class="mdc-card mdc-card--outlined" style="margin-bottom: 16px">
+    <div class="mdc-card-wrapper__text-section">
+
+            <div class="settingsUserInfo">
+                <div class="settingsProfilePic"></div>
+                <div class="settingsProfileInfo">
+                    <p>{{profile.studentNameLong}}</p>
+                    <p>{{profile.subname}}</p>
+                </div>
+            </div>
+        <div class="demo-card__supporting-text" style="text-align: center;margin:0 0 10px 0">
+            <div class="settings-item mdc-ripple-surface clickable">
+                <div class="settings-item__icon"><span class="mdi mdi-account-plus mdc-list-item__graphic"></span></div>
+                <div class="settings-item__text">
+                    <p>Dodaj nowego ucznia</p>
+                    <p>Zaloguj konto ucznia/rodzica w aplikacji</p>
+                </div>
+            </div>
+            <div class="settings-item mdc-ripple-surface clickable">
+                <div class="settings-item__icon"><span class="mdi mdi-delete-empty mdc-list-item__graphic"></span></div>
+                <div class="settings-item__text">
+                    <p>Wyloguj się / usuń profil</p>
+                    <p>Usuwa profil i wszystkie jego dane z przeglądarki</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="mdc-card mdc-card--outlined">
     <div class="mdc-card-wrapper__text-section">
         <div class="demo-card__supporting-text" style="text-align: center;margin:10px 0px">
@@ -8,13 +36,16 @@
                     <p>{{versionName}}</p>
                 </div>
             </div>
-            <div class="settings-item mdc-ripple-surface clickable" onclick="location.href='https://szkolny.eu/privacy-policy/'">
-                <div class="settings-item__icon"><span class="mdi mdi-shield-half-full mdc-list-item__graphic"></span></div>
+            <div class="settings-item mdc-ripple-surface clickable"
+                 onclick="location.href='https://szkolny.eu/privacy-policy/'">
+                <div class="settings-item__icon"><span class="mdi mdi-shield-half-full mdc-list-item__graphic"></span>
+                </div>
                 <div class="settings-item__text one">
                     <p>Polityka prywatności</p>
                 </div>
             </div>
-            <div class="settings-item mdc-ripple-surface clickable">
+            <div class="settings-item mdc-ripple-surface clickable"
+                 onclick="location.href='https://szkolny.eu/discord'">
                 <div class="settings-item__icon"><span class="mdi mdi-discord mdc-list-item__graphic"></span></div>
                 <div class="settings-item__text">
                     <p>Serwer Discord</p>

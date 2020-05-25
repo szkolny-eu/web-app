@@ -28,6 +28,7 @@ let app = new Vue({
         grades: Grades.getGrades(),
         screen: -1,
         days: weekdays,
+        profile: data.profiles[0],
         home: {
             tomorrow: weekdays[date.getDay()],
             today: weekdays[date.getDay() - 1],
