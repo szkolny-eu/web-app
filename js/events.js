@@ -10,14 +10,13 @@ class Event {
 }
 
 class Events {
-    static eventColors = ["#ff9800", "#f44336", "#9c27b0", "#673ab7",
-        "#00bcd4", "#03a9f4", "#2196f3", "#009688",
-        "#4caf50", "#8bc34a", "#e91e63", "#ff5722",
-        "#795548", "#607d8b"];
-
-    monthsAlt = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'listopada', 'października', 'grudnia'];
 
     static getEvents() {
+        const eventColors = ["#ff9800", "#f44336", "#9c27b0", "#673ab7",
+            "#00bcd4", "#03a9f4", "#2196f3", "#009688",
+            "#4caf50", "#8bc34a", "#e91e63", "#ff5722",
+            "#795548", "#607d8b"];
+
         let events = [{
             groupId: 0,
             title: 'Wielomiany - Sprawdzian',
@@ -28,7 +27,7 @@ class Events {
         for (let i = 0; i < data.events.length; i++) {
             let start = moment(data.events[i].eventDate + ' ' + Timetable.parseHour(data.events[i].eventTime));
             let end = start.clone().add(45, 'minutes');
-            let event = new Event(data.events[i].eventType, data.events[i].eventTopic.split('\n')[0], start.format("YYYY-MM-DDTHH:mm:01"), end.format("YYYY-MM-DDTHH:mm:01"), this.eventColors[Utils.getRandomInt(0, this.eventColors.length, data.events[i].eventType)], data.events[i]);
+            let event = new Event(data.events[i].eventType, data.events[i].eventTopic.split('\n')[0], start.format("YYYY-MM-DDTHH:mm:01"), end.format("YYYY-MM-DDTHH:mm:01"), eventColors[Utils.getRandomInt(0, eventColors.length, data.events[i].eventType)], data.events[i]);
             events.push(event);
         }
 
@@ -37,6 +36,7 @@ class Events {
 
     static initCalendar() {
         const calendarEl = document.getElementById('calendar');
+        const monthsAlt = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'listopada', 'października', 'grudnia'];
 
         calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
@@ -58,7 +58,7 @@ class Events {
                 const eventTeacher = Utils.getTeacher(event.teacherId);
                 console.log(event);
                 eventDialog.container_.querySelector('#eventTopic').innerHTML = event.eventTopic;
-                eventDialog.container_.querySelector('#eventAdded').innerHTML = moment(event.eventDate).format("DD") + ' ' + this.monthsAlt[moment(event.eventDate).format("M") - 1] + ' przez ' + eventTeacher.teacherName + ' ' + eventTeacher.teacherSurname;
+                eventDialog.container_.querySelector('#eventAdded').innerHTML = moment(event.eventDate).format("DD") + ' ' + monthsAlt[moment(event.eventDate).format("M") - 1] + ' przez ' + eventTeacher.teacherName + ' ' + eventTeacher.teacherSurname;
                 eventDialog.container_.querySelector('#eventTeacher').innerHTML = eventTeacher.teacherName + ' ' + eventTeacher.teacherSurname;
                 eventDialog.open();
             }

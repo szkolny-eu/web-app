@@ -40,7 +40,7 @@ body {
     padding: 0px;
 }
 
-#app>div {
+#app > div {
     padding: 16px;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 #app,
-#app>div {
+#app > div {
     height: 100%;
 }
 
@@ -163,7 +163,7 @@ divider {
 /*#endregion*/
 
 /*#region Settings */
-.settings-item>div {
+.settings-item > div {
     display: inline-block;
     float: left;
 }
@@ -288,7 +288,7 @@ divider {
 
 /*#region Grades */
 
-.grades>div {
+.grades > div {
     margin: 0px 13px;
     margin-bottom: 5px;
 }
@@ -326,11 +326,11 @@ divider {
 }
 
 .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number:hover {
-    background:rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.06);
 }
 
 .fc-today .fc-day-number {
-    background:#2196F3;
+    background: #2196F3;
     color: #fff
 }
 
@@ -346,7 +346,7 @@ divider {
     line-height: 20px;
 }
 
-.fc-right .fc-button-group .fc-button:not(.fc-dayGridMonth-button){
+.fc-right .fc-button-group .fc-button:not(.fc-dayGridMonth-button) {
     border-left: 1px solid #dadce0;
 }
 
@@ -375,4 +375,53 @@ divider {
     position: absolute;
     z-index: -1;
     left: 10px;
+}
+
+.gradeText {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+}
+
+.gradeField {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 10px;
+    width: 57px;
+    height: 57px;
+    line-height: 58px;
+    text-align: center;
+    font-size: 28px;
+    float: left;
+}
+
+.gradeInfo {
+    display: inline-block;
+    /* float: right; */
+    padding-left: 16px;
+}
+
+.gradeInfo p {
+    margin: 0;
+}
+
+.gradeInfo p:nth-of-type(1) {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.gradeInfo p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.gradeInfo p:nth-of-type(3) {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.gradeTop {
+    height: 58px;
 }

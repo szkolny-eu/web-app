@@ -1,41 +1,29 @@
 "use strict";
 
-//TODO: Add more Colors
-const gradesColors = {
-    '1': '#FF0000',
-    '2': '#FF9100',
-    '3': '#FFFF00',
-    '4': '#76FF03',
-    '5': '#00C853',
-    '6': '#2196F3',
-    '-': '#FF7043',
-    'n': '#FF7043',
-    'b': '#FF7043',
-    '+': '#4CAF50'
-};
-const database = firebase.database();
+// const database = firebase.database();
 const date = new Date("20 May 2020 15:12:00");
 // var date = new Date();
 const weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
 const eventDialog = new mdc.dialog.MDCDialog(document.querySelector('#eventDialog'));
+const gradeDialog = new mdc.dialog.MDCDialog(document.querySelector('#gradeDialog'));
 const data = demo_db;
 let calendar;
 
 Vue.config.ignoredElements = ['divider', 'space', 'loop'];
 Vue.component('grade', {
-    props: ['value'],
+    props: ['value', 'gradeId'],
     data: function data() {
         return {
-            color: gradesColors[this._props.value]
+            color: Utils.getGradeColor(this._props.value)
         };
     },
-    template: '<div v-bind:style="{ backgroundColor: color }" class="grade">{{value}}</div>'
+    template: '<div v-bind:style="{ backgroundColor: color }" class="grade" v-html="value" onclick="Grades.showInfo(this)" id="gradeId"></div>'
 });
 
 let app = new Vue({
     el: '#app',
     data: {
-        versionName: "0.1.1, pre-alpha",
+        versionName: "0.1.21, pre-alpha",
         timetable: Timetable.getTimetable(date),
         grades: Grades.getGrades(),
         screen: -1,
@@ -51,6 +39,22 @@ let app = new Vue({
             events: [""]
             // startEndTomorrow: timetable[date.getDay()][0].start+" - "+timetable[date.getDay()][timetable[date.getDay()].length-1].end,
         }
+    },
+    updated: function () {
+        this.$nextTick(function () {
+            tippy('.grade', {
+                arrow: false,
+                placement: 'bottom-start',
+                content: "",
+                onShow(instance) {
+                    const grade = Grades.getGrade(instance.reference.getAttribute('id'));
+                    if(grade.desc.trim() === '')
+                        instance.setContent(grade.category);
+                    else
+                        instance.setContent(grade.desc);
+                },
+            });
+        })
     }
 });
 

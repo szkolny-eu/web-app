@@ -1,12 +1,8 @@
 <div class="mdc-card mdc-card--outlined">
     <div class="mdc-card-wrapper__text-section">
-       <!-- <div class="demo-card__supporting-text" style="text-align: center;margin:10px 0px">
-             <i>Brak ocen do wyświetlenia</i>
-        </div>-->
         <div class="demo-card__supporting-text grades" v-for="(semester, index) in grades" style="border-bottom:1px solid #e0e0e0;">
             <h5>{{semester[0].subject}}</h5>
-            <div><grade v-for="(grade) in semester" :value="grade.name"></grade></div>
+            <div><grade v-for="(grade) in semester" :value="grade.name" :id="grade.id"></grade></div>
         </div>
     </div>
-    <!-- <divider></divider> -->
 </div>

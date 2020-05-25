@@ -7,9 +7,7 @@ class Utils {
         });
         menuItems[i].className += " mdc-list-item--activated";
         if (i === 2) {
-            setTimeout(function () {
-                Events.initCalendar()
-            }, 500);
+            setTimeout(() => {Events.initCalendar()}, 500);
             document.querySelector("#app").style.background = "#fff";
         } else {
             document.querySelector("#app").style.background = "";
@@ -45,6 +43,79 @@ class Utils {
         }
 
         snackbar.open();
+    }
+
+    static getGradeColor(grade) {
+        switch (grade.toLowerCase()) {
+            case "+":
+            case "++":
+            case"+++":
+                return "#4caf50";
+            case "0":
+            case"-":
+            case"-,":
+            case"-,-,":
+            case"np":
+            case"np.":
+            case"npnp":
+            case"np,":
+            case"np,np,":
+            case"bs":
+            case"nk":
+            case"bz":
+                return "#ff7043";
+            case "1-":
+            case"1":
+            case"f":
+            case"ng":
+                return "#ff0000";
+            case "1+":
+            case"ef":
+                return "#ff3d00";
+            case "2-":
+            case"2":
+            case"e":
+            case"ndp":
+                return "#ff9100";
+            case "2+":
+            case"de":
+                return "#ffab00";
+            case "3-":
+            case"3":
+            case"d":
+            case"popr":
+                return "#ffff00";
+            case "3+":
+            case"cd":
+                return "#c6ff00";
+            case "4-":
+            case"4":
+            case"c":
+            case"db":
+                return "#76ff03";
+            case "4+":
+            case"bc":
+                return "#64dd17";
+            case "5-":
+            case"5":
+            case"b":
+            case"bdb":
+                return "#00c853";
+            case "5+":
+            case"ab":
+                return "#00bfa5";
+            case "6-":
+            case"6":
+            case"a":
+            case"wz":
+                return "#2196f3";
+            case "6+":
+            case"a+":
+                return "#0091ea";
+            default:
+                console.log(grade.toLowerCase());
+                return "#ccc";
+        }
     }
 
     static getCurrentSemester(date) {
