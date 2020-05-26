@@ -1,0 +1,14 @@
+<div class="mdc-card mdc-card--outlined">
+    <div class="mdc-card-wrapper__text-section">
+        <div class="demo-card__supporting-text grades clickable" v-for="(announcement, index) in announcements" style="border-bottom:1px solid #e0e0e0;padding: 8px 16px; height: 62px;">
+            <div class="announcementPic">
+                {{announcement.initials}}
+            </div>
+            <div style="display: inline-block; float: right; width: calc(100% - 88px)">
+                <p style="font-size: 16px;margin: 0">{{announcement.teacher}}</p>
+                <p style="font-size: 13px;margin: 4px 0">{{announcement.subject}}</p>
+                <p style="font-size: 13px;color: rgba(0, 0, 0, 0.6);margin: 0px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{announcement.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

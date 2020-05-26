@@ -7,7 +7,9 @@ class Utils {
         });
         menuItems[i].className += " mdc-list-item--activated";
         if (i === 2) {
-            setTimeout(() => {Events.initCalendar()}, 500);
+            setTimeout(() => {
+                Events.initCalendar()
+            }, 500);
             document.querySelector("#app").style.background = "#fff";
         } else {
             document.querySelector("#app").style.background = "";
@@ -137,7 +139,8 @@ class Utils {
 
     static getTeacherLongName(id) {
         let teacher = this.getTeacher(id);
-        return teacher.teacherName + ' ' + teacher.teacherSurname;
+        return teacher.teacherName + ' Nazwisko';
+        // return teacher.teacherName + ' ' + teacher.teacherSurname;
     }
 
     static getSubject(id) {

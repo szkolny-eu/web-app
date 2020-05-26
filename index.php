@@ -52,6 +52,12 @@
                 </div>
             </transition>
             <transition name="fade">
+                <!-- Announcements screen -->
+                <div v-if="screen === 8">
+                    <?php include 'views/announcements.html'; ?>
+                </div>
+            </transition>
+            <transition name="fade">
                 <!-- Settings screen -->
                 <div v-if="screen === 10">
                     <?php include 'views/settings.html'; ?>
@@ -191,7 +197,8 @@
 <script src="/js/timetable.js"></script>
 <script src="/js/events.js"></script>
 <script src="/js/grades.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/announcements.js"></script>
+<script src="/js/index.js"></script>
 </body>
 
 </html>

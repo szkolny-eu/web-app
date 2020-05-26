@@ -458,3 +458,17 @@ divider {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.6);
 }
+
+.announcementPic {
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 6px !important;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    background: #2196F3;
+}
