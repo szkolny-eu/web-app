@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie :: Szkolny.eu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/material-components-web.min.css">
+    <link rel="stylesheet" href="./css/font/css/materialdesignicons.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #fafafa;
+            user-select: none;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 25px;
+            margin: 10px 16px;
+        }
+
+        .main-icon {
+            color: #03A9F4;
+            font-size: 28px;
+            margin: 0px 16px;
+        }
+
+        .mdc-card {
+            padding-top: 16px;
+        }
+
+        p {
+            font-size: 15px;
+            margin: 0 16px;
+            color: rgba(0, 0, 0, 0.86);
+            margin-bottom: 16px;
+        }
+
+        img {
+            width: 150px;
+            display: inline-block;
+            border-right: 1px solid #ccc;
+            padding-right: 16px;
+            padding-left: 8px;
+            height: 47px;
+            object-fit: contain;
+        }
+
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            line-height: 47px;
+            padding: 0 16px;
+            font-weight: normal;
+            font-size: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: calc(100% - 207px);
+            text-overflow: ellipsis;
+        }
+
+        .journal {
+            margin: 0 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 16px;
+            padding-top: 21px;
+            cursor: pointer;
+        }
+
+        button {
+            border-color: #ccc !important;
+            float: right;
+        }
+
+        .mdc-card__actions {
+            justify-content: flex-end;
+            margin: 16px 8px 4px 8px;
+        }
+
+        .mdc-text-field {
+            margin: 5px 16px;
+            width: calc(100% - 32px);
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 0;
+            left: 16px;
+            line-height: 55px;
+            height: 55px;
+            font-size: 25px;
+        }
+
+        .mdc-text-field__input {
+            padding-left: 55px !important;
+        }
+
+        .mdc-floating-label {
+            left: 42px !important;
+            transition: all 100ms ease;
+        }
+
+        .mdc-floating-label--float-above {
+            left: 4px !important
+        }
+    </style>
+</head>
+<body>
+<div class="mdc-card mdc-card--outlined" style="max-width: 600px;margin: 50px auto" id="main">
+    <div class="mdc-card-wrapper__text-section">
+        <span class="mdi mdi-school mdc-list-item__graphic main-icon"></span>
+        <h1>Jaki masz e-dziennik w szkole?</h1>
+        <p>Wybierz z jakiego e-dziennika korzysta Twoja szkoła. Jeśli masz kilka kont w różnych dziennikach, będziesz
+            mógł je dodać później.</p>
+
+        <div class="journal mdc-ripple-surface" onclick="librus()">
+            <img src="./img/login_logo_librus.png">
+            <h2>Librus/Synergia</h2>
+        </div>
+        <div>
+            <div class="journal mdc-ripple-surface" onclick="">
+                <img src="./img/login_logo_librus.png">
+                <h2>Librus/Synergia</h2>
+            </div>
+            <div class="journal mdc-ripple-surface" onclick="">
+                <img src="./img/login_logo_librus.png">
+                <h2>Librus/Synergia</h2>
+            </div>
+        </div>
+        <div class="journal mdc-ripple-surface" onclick="vulcan()">
+            <img src="./img/login_logo_vulcan.png">
+            <h2>Vulcan UONET+</h2>
+        </div>
+        <div class="journal mdc-ripple-surface">
+            <img src="./img/login_logo_mobidziennik.png">
+            <h2>MobiDziennik</h2>
+        </div>
+        <div class="journal mdc-ripple-surface">
+            <img src="./img/login_logo_iuczniowie.png">
+            <h2>iDziennik Progman / iUczniowie</h2>
+        </div>
+        <div class="journal mdc-ripple-surface">
+            <img src="./img/login_logo_edudziennik.png">
+            <h2>EduDziennik</h2>
+        </div>
+        <div class="journal mdc-ripple-surface">
+            <img src="./img/login_logo_podlasie.png">
+            <h2>Podlaska Platforma Edukacyjna</h2>
+        </div>
+    </div>
+    <div class="mdc-card__actions">
+        <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Pomoc</span>
+        </button>
+    </div>
+</div>
+<div class="mdc-card mdc-card--outlined" style="max-width: 600px;margin: 50px auto;display:none" id="vulcan-chooser">
+    <div class="mdc-card-wrapper__text-section">
+        <span class="mdi mdi-school mdc-list-item__graphic main-icon"></span>
+        <h1>Wulkanowe wulkany</h1>
+        <p>Wybierz z jakiego wulkana korzystać aby módz się zalogować</p>
+
+    </div>
+    <div class="mdc-card__actions">
+        <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Pomoc</span>
+        </button>
+    </div>
+</div>
+<div class="mdc-card mdc-card--outlined" style="max-width: 600px;margin: 50px auto;display: none" id="vulcan">
+    <div class="mdc-card-wrapper__text-section">
+        <span class="mdi mdi-account-circle mdc-list-item__graphic main-icon"></span>
+        <h1>Zaloguj się - Vulcan UONET+</h1>
+        <p>Zaloguj się do dziennika Vulcan UONET+ za pomocą emaila i hasła.</p>
+
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field" id="email">
+            <span class="mdi mdi-email mdc-list-item__graphic input-icon"></span>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="email-label">
+            <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label" id="email-label">Email</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+            </span>
+        </label>
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field" id="symbol">
+            <span class="mdi mdi-school mdc-list-item__graphic input-icon"></span>
+            <input type="password" class="mdc-text-field__input" aria-labelledby="pass-label">
+            <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label" id="symbol-label">Symbol</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+            </span>
+        </label>
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field" id="password">
+            <span class="mdi mdi-lock mdc-list-item__graphic input-icon"></span>
+            <input type="password" class="mdc-text-field__input" aria-labelledby="pass-label">
+            <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label" id="pass-label">Hasło</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+            </span>
+        </label>
+    </div>
+    <div class="mdc-card__actions" style="justify-content: space-between">
+        <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Cofnij</span>
+        </button>
+        <button class="mdc-button mdc-button--raised mdc-card__action mdc-card__action--button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Zaloguj</span>
+        </button>
+    </div>
+</div>
+<script src="./js/libs/material-components-web.min.js"></script>
+<script>
+    document.querySelectorAll('.journal').forEach((e) => {
+        mdc.ripple.MDCRipple.attachTo(e);
+    });
+
+    document.querySelectorAll('.mdc-text-field').forEach((e) => {
+        const textField = new mdc.textField.MDCTextField(e);
+    });
+
+    function vulcan() {
+        document.querySelector("#main").style.display = "none";
+        document.querySelector("#vulcan").style.display = "none";
+        document.querySelector("#librus").style.display = "none";
+        document.querySelector("#vulcan-chooser").style.display = "";
+    }
+
+    function librus() {
+        document.querySelector("#main").style.display = "none";
+        document.querySelector("#vulcan").style.display = "none";
+        document.querySelector("#vulcan-chooser").style.display = "none";
+        document.querySelector("#librus").style.display = "";
+    }
+
+    fetch('https://api.szkolny.eu/appLogin/platforms/vulcan', {
+        method: 'POST',
+        headers: {
+            'X-ApiKey': 'kpostek_devel_fc8cf925bf9943842ab6453195bca945'
+        }
+    }).then(response => response.json())
+        .then(data => {
+            //
+            for(let i = 0; i < data.data.length; i++) {
+                if(i==1)continue;
+                document.querySelector("#vulcan-chooser .mdc-card-wrapper__text-section").innerHTML += `<div class="journal mdc-ripple-surface"><img src="${data.data[i].icon}"><h2>${data.data[i].name}</h2></div>`;
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+</script>
+</body>
+</html>

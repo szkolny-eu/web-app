@@ -12,7 +12,5 @@
   "devDependencies": {
     "electron": "^9.0.0"
   },
-  "dependencies": {
-    "@wulkanowy/sdk": "git+https://github.com/wulkanowy/sdk-node.git"
-  }
+  "dependencies": {}
 }
