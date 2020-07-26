@@ -7,103 +7,7 @@
     <link rel="stylesheet" href="./css/material-components-web.min.css">
     <link rel="stylesheet" href="./css/font/css/materialdesignicons.min.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #fafafa;
-            user-select: none;
-        }
-
-        h1 {
-            font-weight: normal;
-            font-size: 25px;
-            margin: 10px 16px;
-        }
-
-        .main-icon {
-            color: #03A9F4;
-            font-size: 28px;
-            margin: 0px 16px;
-        }
-
-        .mdc-card {
-            padding-top: 16px;
-        }
-
-        p {
-            font-size: 15px;
-            margin: 0 16px;
-            color: rgba(0, 0, 0, 0.86);
-            margin-bottom: 16px;
-        }
-
-        img {
-            width: 150px;
-            display: inline-block;
-            border-right: 1px solid #ccc;
-            padding-right: 16px;
-            padding-left: 8px;
-            height: 47px;
-            object-fit: contain;
-        }
-
-        h2 {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0;
-            line-height: 47px;
-            padding: 0 16px;
-            font-weight: normal;
-            font-size: 20px;
-            overflow: hidden;
-            white-space: nowrap;
-            max-width: calc(100% - 207px);
-            text-overflow: ellipsis;
-        }
-
-        .journal {
-            margin: 0 16px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 16px;
-            padding-top: 21px;
-            cursor: pointer;
-        }
-
-        button {
-            border-color: #ccc !important;
-            float: right;
-        }
-
-        .mdc-card__actions {
-            justify-content: flex-end;
-            margin: 16px 8px 4px 8px;
-        }
-
-        .mdc-text-field {
-            margin: 5px 16px;
-            width: calc(100% - 32px);
-        }
-
-        .input-icon {
-            position: absolute;
-            top: 0;
-            left: 16px;
-            line-height: 55px;
-            height: 55px;
-            font-size: 25px;
-        }
-
-        .mdc-text-field__input {
-            padding-left: 55px !important;
-        }
-
-        .mdc-floating-label {
-            left: 42px !important;
-            transition: all 100ms ease;
-        }
-
-        .mdc-floating-label--float-above {
-            left: 4px !important
-        }
+        body{font-family:'Roboto', sans-serif;background:#fafafa;user-select:none}h1{font-weight:normal;font-size:25px;margin:10px 16px}.main-icon{color:#03A9F4;font-size:28px;margin:0 16px}.mdc-card{padding-top:16px}p{font-size:15px;margin:0 16px;color:rgba(0, 0, 0, 0.86);margin-bottom:16px}img{width:150px;display:inline-block;border-right:1px solid #ccc;padding-right:16px;padding-left:8px;height:47px;object-fit:contain}h2{display:inline-block;vertical-align:top;margin:0;line-height:47px;padding:0 16px;font-weight:normal;font-size:20px;overflow:hidden;white-space:nowrap;max-width:calc(100% - 207px);text-overflow:ellipsis}.journal{margin:0 16px;border-bottom:1px solid #ccc;padding-bottom:16px;padding-top:21px;cursor:pointer}button{border-color:#ccc !important;float:right}.mdc-card__actions{justify-content:flex-end;margin:16px 8px 4px}.mdc-text-field{margin:5px 16px;width:calc(100% - 32px)}.input-icon{position:absolute;top:0;left:16px;line-height:55px;height:55px;font-size:25px}.mdc-text-field__input{padding-left:55px !important}.mdc-floating-label{left:42px !important;transition:all 100ms ease}.mdc-floating-label--float-above{left:4px !important}
     </style>
 </head>
 <body>
@@ -252,9 +156,8 @@
         }
     }).then(response => response.json())
         .then(data => {
-            //
-            for(let i = 0; i < data.data.length; i++) {
-                if(i==1)continue;
+            for (let i = 0; i < data.data.length; i++) {
+                if (i === 1) continue;
                 document.querySelector("#vulcan-chooser .mdc-card-wrapper__text-section").innerHTML += `<div class="journal mdc-ripple-surface"><img src="${data.data[i].icon}"><h2>${data.data[i].name}</h2></div>`;
             }
         })
