@@ -2994,7 +2994,7 @@ const demo_db = {
             "teacherId": 866976,
             "teacherLoginId": null,
             "teacherName": "",
-            "teacherSurname": "Administrator",
+            "teacherSurname": "Nazwisko",
             "teacherType": 64,
             "teacherTypeDescription": null
         },
@@ -3003,7 +3003,7 @@ const demo_db = {
             "teacherId": 874658,
             "teacherLoginId": null,
             "teacherName": "Marzenna",
-            "teacherSurname": "Zaworska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3012,7 +3012,7 @@ const demo_db = {
             "teacherId": 874661,
             "teacherLoginId": null,
             "teacherName": "Agnieszka",
-            "teacherSurname": "Chechlińska-Tuzinek",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3021,7 +3021,7 @@ const demo_db = {
             "teacherId": 874662,
             "teacherLoginId": null,
             "teacherName": "Małgorzata",
-            "teacherSurname": "Telakowska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3030,7 +3030,7 @@ const demo_db = {
             "teacherId": 875536,
             "teacherLoginId": null,
             "teacherName": "Aleksandra",
-            "teacherSurname": "Niewiadomska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3039,7 +3039,7 @@ const demo_db = {
             "teacherId": 875538,
             "teacherLoginId": null,
             "teacherName": "Maria",
-            "teacherSurname": "Andrzejewska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3048,7 +3048,7 @@ const demo_db = {
             "teacherId": 875539,
             "teacherLoginId": null,
             "teacherName": "Izabella",
-            "teacherSurname": "Bnińska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3057,7 +3057,7 @@ const demo_db = {
             "teacherId": 875541,
             "teacherLoginId": null,
             "teacherName": "Krystyna",
-            "teacherSurname": "Dybowska-Głąb",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3066,7 +3066,7 @@ const demo_db = {
             "teacherId": 875542,
             "teacherLoginId": null,
             "teacherName": "Maria",
-            "teacherSurname": "Hinc",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3075,7 +3075,7 @@ const demo_db = {
             "teacherId": 875543,
             "teacherLoginId": null,
             "teacherName": "Renata",
-            "teacherSurname": "Majcher",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3084,7 +3084,7 @@ const demo_db = {
             "teacherId": 875544,
             "teacherLoginId": null,
             "teacherName": "Agnieszka",
-            "teacherSurname": "Marczuk",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3093,7 +3093,7 @@ const demo_db = {
             "teacherId": 875548,
             "teacherLoginId": null,
             "teacherName": "Michał",
-            "teacherSurname": "Jamiołkowski",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3102,7 +3102,7 @@ const demo_db = {
             "teacherId": 875549,
             "teacherLoginId": null,
             "teacherName": "Elżbieta",
-            "teacherSurname": "Kowalczyk",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3111,7 +3111,7 @@ const demo_db = {
             "teacherId": 875550,
             "teacherLoginId": null,
             "teacherName": "Anita",
-            "teacherSurname": "Walczak-Wiśniewska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3120,7 +3120,7 @@ const demo_db = {
             "teacherId": 875552,
             "teacherLoginId": null,
             "teacherName": "Jolanta",
-            "teacherSurname": "Wieczorek-Szymańska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3129,7 +3129,7 @@ const demo_db = {
             "teacherId": 875554,
             "teacherLoginId": null,
             "teacherName": "Katarzyna",
-            "teacherSurname": "Rupala",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3138,7 +3138,7 @@ const demo_db = {
             "teacherId": 875556,
             "teacherLoginId": null,
             "teacherName": "Marta",
-            "teacherSurname": "Gordon",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3147,7 +3147,7 @@ const demo_db = {
             "teacherId": 875557,
             "teacherLoginId": null,
             "teacherName": "Tadeusz",
-            "teacherSurname": "Bąk",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3156,7 +3156,7 @@ const demo_db = {
             "teacherId": 875558,
             "teacherLoginId": null,
             "teacherName": "Krzysztof",
-            "teacherSurname": "Kotwicki",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3165,7 +3165,7 @@ const demo_db = {
             "teacherId": 875559,
             "teacherLoginId": null,
             "teacherName": "Kamila",
-            "teacherSurname": "Załuska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3174,7 +3174,7 @@ const demo_db = {
             "teacherId": 875566,
             "teacherLoginId": null,
             "teacherName": "Edyta",
-            "teacherSurname": "Radwańska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3183,7 +3183,7 @@ const demo_db = {
             "teacherId": 875571,
             "teacherLoginId": null,
             "teacherName": "Mariola",
-            "teacherSurname": "Półgrabia",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3192,7 +3192,7 @@ const demo_db = {
             "teacherId": 875574,
             "teacherLoginId": null,
             "teacherName": "Agnieszka",
-            "teacherSurname": "Zalewska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3201,7 +3201,7 @@ const demo_db = {
             "teacherId": 875576,
             "teacherLoginId": null,
             "teacherName": "Elżbieta",
-            "teacherSurname": "Kozdrowicz",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3210,7 +3210,7 @@ const demo_db = {
             "teacherId": 875578,
             "teacherLoginId": null,
             "teacherName": "Maria",
-            "teacherSurname": "Domosud",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3219,7 +3219,7 @@ const demo_db = {
             "teacherId": 875580,
             "teacherLoginId": null,
             "teacherName": "Izabela",
-            "teacherSurname": "Bielińska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3228,7 +3228,7 @@ const demo_db = {
             "teacherId": 875581,
             "teacherLoginId": null,
             "teacherName": "Paweł",
-            "teacherSurname": "Marciniak",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3237,7 +3237,7 @@ const demo_db = {
             "teacherId": 875582,
             "teacherLoginId": null,
             "teacherName": "Artur",
-            "teacherSurname": "Rosik",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3246,7 +3246,7 @@ const demo_db = {
             "teacherId": 875583,
             "teacherLoginId": null,
             "teacherName": "Arkadiusz",
-            "teacherSurname": "Kuźba",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3255,7 +3255,7 @@ const demo_db = {
             "teacherId": 876752,
             "teacherLoginId": null,
             "teacherName": "Hanna",
-            "teacherSurname": "Trzaskowska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 4,
             "teacherTypeDescription": null
         },
@@ -3264,7 +3264,7 @@ const demo_db = {
             "teacherId": 1086415,
             "teacherLoginId": null,
             "teacherName": "Hanna",
-            "teacherSurname": "Trzaskowska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3273,7 +3273,7 @@ const demo_db = {
             "teacherId": 1151454,
             "teacherLoginId": null,
             "teacherName": "Agnieszka",
-            "teacherSurname": "Gruchelska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3282,7 +3282,7 @@ const demo_db = {
             "teacherId": 1152140,
             "teacherLoginId": null,
             "teacherName": "Marek",
-            "teacherSurname": "Baranowski",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3291,7 +3291,7 @@ const demo_db = {
             "teacherId": 1186290,
             "teacherLoginId": null,
             "teacherName": "Marta",
-            "teacherSurname": "Plichta",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3300,7 +3300,7 @@ const demo_db = {
             "teacherId": 1232042,
             "teacherLoginId": null,
             "teacherName": "Magdalena",
-            "teacherSurname": "Otłowska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3309,7 +3309,7 @@ const demo_db = {
             "teacherId": 1232043,
             "teacherLoginId": null,
             "teacherName": "Katarzyna",
-            "teacherSurname": "Zjawińska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3318,7 +3318,7 @@ const demo_db = {
             "teacherId": 1232690,
             "teacherLoginId": null,
             "teacherName": "Małgorzata",
-            "teacherSurname": "Bielecka",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3327,7 +3327,7 @@ const demo_db = {
             "teacherId": 1241643,
             "teacherLoginId": null,
             "teacherName": "Iwona",
-            "teacherSurname": "Arcimowicz",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3336,7 +3336,7 @@ const demo_db = {
             "teacherId": 1262143,
             "teacherLoginId": null,
             "teacherName": "Iwona",
-            "teacherSurname": "Arcimowicz",
+            "teacherSurname": "Nazwisko",
             "teacherType": 64,
             "teacherTypeDescription": null
         },
@@ -3345,7 +3345,7 @@ const demo_db = {
             "teacherId": 1264085,
             "teacherLoginId": null,
             "teacherName": "P",
-            "teacherSurname": "Praktykant",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3354,7 +3354,7 @@ const demo_db = {
             "teacherId": 1318944,
             "teacherLoginId": null,
             "teacherName": "Joanna",
-            "teacherSurname": "Bujak",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3363,7 +3363,7 @@ const demo_db = {
             "teacherId": 1405433,
             "teacherLoginId": null,
             "teacherName": "Katarzyna",
-            "teacherSurname": "Włodarska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3372,7 +3372,7 @@ const demo_db = {
             "teacherId": 1409149,
             "teacherLoginId": null,
             "teacherName": "Krzysztof",
-            "teacherSurname": "Maksymow",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3381,7 +3381,7 @@ const demo_db = {
             "teacherId": 1449232,
             "teacherLoginId": null,
             "teacherName": "Dariusz",
-            "teacherSurname": "Ks. Rosłon",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3390,7 +3390,7 @@ const demo_db = {
             "teacherId": 1579716,
             "teacherLoginId": null,
             "teacherName": "Agnieszka",
-            "teacherSurname": "Anisimowicz",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3399,7 +3399,7 @@ const demo_db = {
             "teacherId": 1579717,
             "teacherLoginId": null,
             "teacherName": "Małgorzata",
-            "teacherSurname": "Karpezo",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3408,7 +3408,7 @@ const demo_db = {
             "teacherId": 1579718,
             "teacherLoginId": null,
             "teacherName": "Justyna",
-            "teacherSurname": "Kowalczyk",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3417,7 +3417,7 @@ const demo_db = {
             "teacherId": 1579719,
             "teacherLoginId": null,
             "teacherName": "Zbigniew",
-            "teacherSurname": "Orłowski",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3426,7 +3426,7 @@ const demo_db = {
             "teacherId": 1579720,
             "teacherLoginId": null,
             "teacherName": "Tomasz",
-            "teacherSurname": "Paluch",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         },
@@ -3435,7 +3435,7 @@ const demo_db = {
             "teacherId": 1579721,
             "teacherLoginId": null,
             "teacherName": "Małgorzata",
-            "teacherSurname": "Zajączkowska",
+            "teacherSurname": "Nazwisko",
             "teacherType": 0,
             "teacherTypeDescription": null
         }
